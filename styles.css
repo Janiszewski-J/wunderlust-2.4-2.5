@@ -104,6 +104,7 @@ header{
     grid-template-columns: 1fr 2fr;
     align-items: center;
     padding: 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
 footer{
@@ -158,6 +159,7 @@ img{
     flex-direction: column;
     row-gap: 10px;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 /* Header & navigation styles */
@@ -272,12 +274,13 @@ nav a:hover{
 }
 
 #intro h2, #intro p{
-    padding: 0 2rem;
+    margin: 0 2rem;
 }
 
 #intro p{
     font-size: 0.75rem;
     line-height: 1.8;
+    margin-bottom: 10px;
 }
 
 #plan, #testimonials, #about, #contact{
@@ -320,11 +323,16 @@ nav a:hover{
     max-height: 150px;
 }
 
+#plan img:hover, #plan img:focus{
+    filter: brightness(10%) sepia(100%) saturate(5000%) hue-rotate(290deg);
+}
+
 /* Testimonials */
 #testimonials div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
 }
 
 #testimonials section{
@@ -375,6 +383,7 @@ q:after {
 #about div{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
 }
 
 #about img{
@@ -528,7 +537,7 @@ fieldset label{
 }
 
 #mySubmit{
-    margin: 10px auto 0;
+    margin: 1rem auto 0;
     width: 100%;
     color: var(--white);
     background-color: var(--purple);
@@ -537,6 +546,11 @@ fieldset label{
     font-size: 0.9rem;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+#mySubmit:hover, #mySubmit:focus{
+    color: var(--dk-gray);
+    background-color: var(--yellow);
 }
 
 /* Footer */
@@ -614,7 +628,7 @@ footer p, footer a{
     }
 }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1040px) {
     /* Testimonials */
     #testimonials div{
         display: flex;
@@ -626,6 +640,18 @@ footer p, footer a{
     }
 }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1200px) {
+    #intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
+    #intro h2, #intro p{
+        grid-column: 1/2;
+    }
+
+    #img-grid{
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
 }
