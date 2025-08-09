@@ -67,17 +67,12 @@ table {
 }
 
 /* Global/mobile styles */
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
 body{
     font-family: var(--body);
     font-size: 1rem;
     color: var(--dk-gray);
     line-height: 1.5;
+    box-sizing: border-box;
 }
 
 /* Skip link styles */
